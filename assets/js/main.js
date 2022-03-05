@@ -245,3 +245,46 @@
   });
 
 })()
+
+const aboutme = document.querySelector(".aboutMe")
+const headerEvent = document.querySelector("#headerEvent")
+const aboutEvent = document.querySelector("#aboutEvent")
+const resumeEvent = document.querySelector("#resumeEvent")
+const serviceEvent = document.querySelector("#serviceEvent")
+const portfolioEvent = document.querySelector("#portfolioEvent")
+const contactEvent = document.querySelector("#contactEvent")
+
+ aboutme.addEventListener("click",function(){
+  DislplayAboutNone()
+ })
+ headerEvent.addEventListener("click",function(){
+  DislplayAboutNone()
+ })
+ aboutEvent.addEventListener("click",function(){
+  DislplayAboutNone()
+ })
+ resumeEvent.addEventListener("click",function(){
+  DislplayAboutNone()
+ })
+ serviceEvent.addEventListener("click",function(){
+  DislplayAboutNone()
+ })
+ portfolioEvent.addEventListener("click",function(){
+  DislplayAboutNone()
+ })
+ contactEvent.addEventListener("click",function(){
+  DislplayAboutNone()
+ })
+
+
+
+ headerEvent.addEventListener("click", function(){
+  aboutme.style.display = "";
+ })
+
+ function DislplayAboutNone(){
+  aboutme.style.display = "none"
+ }
+
+
+

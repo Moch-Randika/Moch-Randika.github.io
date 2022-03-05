@@ -1193,3 +1193,10 @@ section .container {
 .credits a:hover {
   color: #fff;
 }
+
+/*  */
+
+.aboutMe {
+  margin-top: 30px;
+  opacity: 0.6;
+}
