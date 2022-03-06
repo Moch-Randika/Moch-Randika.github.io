@@ -1196,7 +1196,13 @@ section .container {
 
 /*  */
 
-.aboutMe {
-  margin-top: 30px;
+.space {
+  margin-top: -30px;
+  margin-left: 5px;
   opacity: 0.6;
+}
+
+.space2 {
+  margin-bottom: 20px;
+
 }
