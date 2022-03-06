@@ -253,7 +253,9 @@ const resumeEvent = document.querySelector("#resumeEvent")
 const serviceEvent = document.querySelector("#serviceEvent")
 const portfolioEvent = document.querySelector("#portfolioEvent")
 const contactEvent = document.querySelector("#contactEvent")
-
+const copyTextEmail = document.querySelector(".copyTextEmail")
+const copyTextNoTlp = document.querySelector(".copyTextNoTlp")
+const hitCounter = document.querySelector(".hit-counter")
 
  aboutme.addEventListener("click",function(){
   DislplayAboutNone()
@@ -281,8 +283,26 @@ const contactEvent = document.querySelector("#contactEvent")
 
  headerEvent.addEventListener("click", function(){
   aboutme.style.display = "";
+  hitCounter.style.display = ""
  })
 
  function DislplayAboutNone(){
   aboutme.style.display = "none"
+  hitCounter.style.display = "none"
  }
+
+ const email = "mochammadrandika@gmail.com"
+const notelp = "+6289622485159"
+ copyTextEmail.addEventListener("click",function(){
+      
+      navigator.clipboard.writeText(email)
+      alert(`copies success:  ${email}`);
+ })
+ copyTextNoTlp.addEventListener("click",function(){
+      
+      navigator.clipboard.writeText(notelp)
+      alert(`copies success:  ${notelp}`);
+ })
+
+ 
+
