@@ -254,6 +254,7 @@ const serviceEvent = document.querySelector("#serviceEvent")
 const portfolioEvent = document.querySelector("#portfolioEvent")
 const contactEvent = document.querySelector("#contactEvent")
 
+
  aboutme.addEventListener("click",function(){
   DislplayAboutNone()
  })
@@ -285,6 +286,3 @@ const contactEvent = document.querySelector("#contactEvent")
  function DislplayAboutNone(){
   aboutme.style.display = "none"
  }
-
-
-
