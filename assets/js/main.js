@@ -256,6 +256,7 @@ const contactEvent = document.querySelector("#contactEvent")
 const copyTextEmail = document.querySelector(".copyTextEmail")
 const copyTextNoTlp = document.querySelector(".copyTextNoTlp")
 const hitCounter = document.querySelector(".hit-counter")
+const countbox = document.getElementById("countbox");
 
  aboutme.addEventListener("click",function(){
   DislplayAboutNone()
@@ -304,5 +305,32 @@ const notelp = "+6289622485159"
       alert(`copies success:  ${notelp}`);
  })
 
+
+  const form = document.getElementById("formSend");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      fetch("https://usebasin.com/f/dd6de26dc424", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+          },
+          body: formData,
+        })
+        .then((response) => {
+          if (response.status === 200) {
+           alert("message sent successfully")
+           display()
+          } else {
+            alert("message sent fail")
+          }
+        })
+        .catch((error) => console.log(error));
+    });
+
+      function display(){
+    form.innerHTML =``
+    countbox.innerHTML=`<div class="sent-message">Your message has been sent. Thank you!</div>`
+      }
  
 
